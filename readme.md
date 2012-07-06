@@ -1,6 +1,6 @@
 # Why Micropages #
 
-In a world with CMS ranging from Octopress, publishing with Jekyll via Dropbox, up to projects like Django CMS, I wanted a simple way of updating my sites, uncumbered with complex workflows, updateable without logging in to a server. I am already using Django, and I am a developer, so I am fine publishing with just Django templates. flatpages would work, but I didn't to SSH every time I needed to do a page change, thus Micropages was born.
+In a world with CMS ranging from Octopress, publishing with Jekyll via Dropbox, up to projects like Django CMS, I wanted a very simple way of updating my sites, unencumbered with complex workflows, updateable without logging in to a server, or messing with text editors and uploading to Dropbox on the go. I am already using Django, and I am a developer, so I am fine publishing with just Django templates. flatpages would work, but I didn't to SSH every time I needed to do a page change, thus Micropages was born.
 
 Micropages provides a simple way to edit your site pages online using Django Admin, in a nice visual editor with syntax highlighting and realtime preview.
 
