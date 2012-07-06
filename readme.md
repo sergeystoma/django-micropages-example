@@ -4,7 +4,7 @@ In a world with CMS ranging from Octopress, publishing with Jekyll via Dropbox, 
 
 Micropages provides a simple way to edit your site pages online using Django Admin, in a nice visual editor with syntax highlighting and realtime preview.
 
-![]()
+![Editor](https://github.com/underclouds/django-micropages-example/raw/master/readme-images/micropages_example.png)
 
 # Django Version
 
