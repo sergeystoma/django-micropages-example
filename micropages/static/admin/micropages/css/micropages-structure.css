@@ -1,0 +1,159 @@
+html, body { height: 100%; }
+
+body { margin: 0; padding: 0; font: 12px/14px normal Helvetica, Arial; overflow: hidden; }
+
+/* Structure. */
+
+header { 
+    position: relative;
+    height: 32px; 
+    padding: 8px;            
+}
+
+header .form-path { 
+    margin-right: 100px;
+}
+
+header .form-path input {
+    box-sizing: border-box; 
+    -moz-box-sizing: border-box; 
+    -webkit-border-box: border-box;
+
+    width: 100%;            
+    padding: 8px 12px;
+
+    font: normal 12px/14px Helvetica, Arial;
+}
+
+header .form-content {
+    display: none;            
+}
+
+header .form-published {
+    position: absolute;
+    right: 7em;
+    top: 50%;
+    margin-top: -7px;
+}
+
+header .form-version {
+    position: absolute;
+    right: 0em;
+    top: 50%;
+    width: 6em;
+    margin-top: -7px;
+    text-align: left;
+}
+
+footer {
+    height: 22px;
+    padding: 8px;
+    overflow: hidden;            
+}
+
+footer .cancel-link {}
+
+footer .auto-refresh-link { 
+    float: right;
+}
+
+footer .auto-refresh-link.auto-refresh-active { 
+    opacity: 0.5;
+}
+
+footer .refresh-now-link { 
+    float: right;
+}
+
+footer .refresh-now-link.auto-refresh-active { 
+    display: none;
+}
+
+footer .modified-status {
+    float: right;
+    margin-right: 20px;
+
+    font: normal 12px/24px Arial, sans-serif;    
+
+    display: none;
+}
+
+footer .module.footer { 
+    display: inline; 
+}
+
+footer div.submit-row {
+    display: inline;
+}
+
+footer div.submit-row > p {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+footer div.submit-row > input {
+    float: left;
+}
+
+footer ul.submit-row { 
+    margin: 0; 
+    padding: 0; 
+    display: inline; 
+}
+
+footer ul.submit-row li { 
+    list-style: none; 
+    display: inline-block; 
+}
+
+footer ul.submit-row li.submit-button-container { 
+    float: left; 
+}        
+
+footer ul.submit-row li.delete-link-container { 
+    float: none; 
+}
+
+footer a, footer button, footer input {            
+    display: inline-block;
+    position: relative;
+    height: 20px;
+    padding: 0px 20px;
+    margin: 1px 3px;            
+    text-align: center;
+    text-decoration: none;
+
+    border: none;
+
+    font: normal 11px/20px Arial, sans-serif;
+    
+    cursor: pointer;
+}
+
+div.content {
+    position: absolute !important;
+    left: 0px;
+    top: 88px;
+    right: 0px;
+    bottom: 0px;
+}
+
+div#editor {            
+}
+
+div#preview {            
+}        
+
+div.preview-overlay {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    display: none;
+}
+
+div.splitter-active div.preview-overlay {
+    display: block;
+}

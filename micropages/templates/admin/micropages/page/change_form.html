@@ -1,0 +1,99 @@
+{% load adminmedia admin_modify i18n %}
+
+<!doctype html>
+<html>
+<head>
+    <link href="{{ STATIC_URL }}admin/micropages/css/micropages-structure.css" type="text/css" rel="stylesheet" media="screen" />
+    <link href="{{ STATIC_URL }}admin/micropages/css/micropages-dark.css" type="text/css" rel="stylesheet" media="screen" />
+
+    <script src="{{ STATIC_URL }}admin/micropages/js/jquery/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="{{ STATIC_URL }}admin/micropages/js/jquery/jquery.cookie.js" type="text/javascript"></script>
+    <script src="{{ STATIC_URL }}admin/micropages/js/jquery/jquery.ctrl.js" type="text/javascript"></script>
+    <script src="{{ STATIC_URL }}admin/micropages/js/splitter/splitter-1.6-modified.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $.noConflict();
+    </script>
+    
+    <script src="{{ STATIC_URL }}admin/micropages/js/ace/ace-noconflict.js" type="text/javascript"></script>
+    <script src="{{ STATIC_URL }}admin/micropages/js/ace/theme-monokai-noconflict.js" type="text/javascript"></script>
+    <script src="{{ STATIC_URL }}admin/micropages/js/ace/mode-html-noconflict.js" type="text/javascript"></script>   
+
+    <script src="{{ STATIC_URL }}admin/micropages/js/micropages.js" type="text/javascript"></script>
+</head>
+<body class="micropages-dark">
+    <form {% if has_file_field %}enctype="multipart/form-data" {% endif %}action="{{ form_url }}" method="post" id="{{ opts.module_name }}_form">{% csrf_token %}
+        <header>
+            {% for fieldset in adminform %}
+                {% for line in fieldset %}
+                    {% for field in line %}
+                        {% if field.field.name == 'path' %}
+                            <div class="form-path">
+                                {{ field.field }}
+                            </div>
+                        {% endif %}
+                        {% if field.field.name == 'content' %}
+                            <div class="form-content">
+                                {{ field.field }}
+                            </div>
+                        {% endif %}
+                        {% if field.field.name == 'published' %}
+                            <div class="form-published">
+                                {{ field.contents }}
+                            </div>
+                        {% endif %}
+                    {% endfor %}    
+                {% endfor %}            
+            {% endfor %}
+            <div class="form-version">
+                {% for fieldset in adminform %}
+                    {% for line in fieldset %}
+                        {% for field in line %}
+                            {% if field.field.name == 'branched_from' and field.contents != '(None)' %}
+                                <span class="branched">
+                                    v {{ field.contents }} &rarr;
+                                </span>
+                            {% endif %}
+                        {% endfor %}
+                    {% endfor %}
+                {% endfor %}
+                {% for fieldset in adminform %}
+                    {% for line in fieldset %}
+                        {% for field in line %}                            
+                            {% if field.field.name == 'version' %}
+                                <span class="version">
+                                    v {{ field.contents }}
+                                </span>
+                            {% endif %}
+                        {% endfor %}
+                    {% endfor %}
+                {% endfor %}
+            </div>
+        </header>
+        <footer>
+            <a href='..' class="cancel-link">Cancel</a>
+            <button class="auto-refresh-link">Auto</button>
+            <button class="refresh-now-link">Refresh Now</button>
+            <span class="modified-status">Modified</span>
+            {% submit_row %}
+        </footer>
+
+        <div class="content">
+            <div id="editor">                
+            </div>
+            <div id="preview">
+                <iframe id="preview-frame" name="preview-frame" width="100%" height="100%" frameborder="0">
+                </iframe>
+                <div class="preview-overlay">
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <div style="display: none;">
+        <form id="preview-form" action='../preview/' method='post' target="preview-frame">{% csrf_token %}
+            <textarea name="page">
+            </textarea>
+        </form>
+    </div>
+</body>
+</html>

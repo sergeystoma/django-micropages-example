@@ -1,0 +1,163 @@
+[
+    {
+        "model": "micropages.Page",
+        "pk": 1,
+        "fields": {
+            "path": "/templates/base/",
+            "content": "/templates/base/@1",
+            "version": 1,
+            "published": true
+        }
+    },
+    {
+        "model": "micropages.Page",
+        "pk": 2,
+        "fields": {
+            "path": "/templates/base/",
+            "content": "/templates/base/@2",
+            "version": 2,
+            "published": false
+        }
+    },
+    {
+        "model": "micropages.Page",
+        "pk": 3,
+        "fields": {
+            "path": "/templates/base/",
+            "content": "/templates/base/@3",
+            "version": 3,
+            "published": true
+        }
+    },
+    {
+        "model": "micropages.Page",
+        "pk": 4,
+        "fields": {
+            "path": "/templates/blocks/",
+            "content": "before {% block middle %}{% endblock %} after",
+            "version": 1,
+            "published": true
+        }
+    },
+    {
+        "model": "micropages.Page",
+        "pk": 5,
+        "fields": {
+            "path": "/templates/blocks/",
+            "content": "blocks@2",
+            "version": 2,
+            "published": false
+        }
+    },
+    {
+        "model": "micropages.Page",
+        "pk": 6,
+        "fields": {
+            "path": "/insert-block/",
+            "content": "{% extends '/templates/blocks/' %} {% block middle %}middle{% endblock %}",
+            "version": 1,
+            "published": true
+        }
+    },
+    {
+        "model": "micropages.Page",
+        "pk": 7,
+        "fields": {
+            "path": "/syntax-error/",
+            "content": "{% notag %}",
+            "version": 1,
+            "published": true
+        }
+    },
+    {
+        "model": "micropages.Page",
+        "pk": 8,
+        "fields": {
+            "path": "/unknown-base/",
+            "content": "{% extends '/unknown/' %}",
+            "version": 1,
+            "published": true
+        }
+    },
+    {
+        "model": "micropages.Page",
+        "pk": 9,
+        "fields": {
+            "path": "/extend-version/",
+            "content": "{% extends '/templates/blocks/@2' %}",
+            "version": 1,
+            "published": true
+        }
+    },    
+    {
+        "model": "micropages.Page",
+        "pk": 10,
+        "fields": {
+            "path": "/add-version/",
+            "content": "",
+            "version": 1,
+            "published": true
+        }
+    },
+    {
+        "model": "micropages.Page",
+        "pk": 11,
+        "fields": {
+            "path": "/add-version/",
+            "content": "",
+            "version": 2,
+            "published": false
+        }
+    },
+    {
+        "model": "micropages.Page",
+        "pk": 12,
+        "fields": {
+            "path": "/publish/",
+            "content": "",
+            "version": 1,
+            "published": true
+        }
+    },
+    {
+        "model": "micropages.Page",
+        "pk": 13,
+        "fields": {
+            "path": "/publish/",
+            "content": "",
+            "version": 2,
+            "published": false
+        }
+    },
+    {
+        "model": "micropages.Page",
+        "pk": 14,
+        "fields": {
+            "path": "/publish-this/",
+            "content": "",
+            "version": 1,
+            "published": false
+        }
+    },
+    {
+        "model": "micropages.Page",
+        "pk": 15,
+        "fields": {
+            "path": "/donot-unpublish-this/",
+            "content": "",
+            "version": 1,
+            "published": true
+        }
+    },
+    {
+        "model": "micropages.Page",
+        "pk": 16,
+        "fields": {
+            "path": "/admin-page/",
+            "content": "in admin",
+            "version": 1,
+            "published": true
+        }
+    }
+]
+
