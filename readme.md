@@ -12,14 +12,14 @@ Last tested on 1.3.1.
 
 # Installing Example Application #
 
-$ git clone git://github.com/underclouds/django-micropages-example.git
-$ cd django-micropages-example
-$ pip install -r pip-requirements.txt
-$ cp settings_example.py settings.py
-$ python manage.py syncdb
-$ python manage.py test
-$ python manage.py loaddata ./fixtures/example.json
-$ python manage.py runserver 0:8080
+    $ git clone git://github.com/underclouds/django-micropages-example.git
+    $ cd django-micropages-example
+    $ pip install -r pip-requirements.txt
+    $ cp settings_example.py settings.py
+    $ python manage.py syncdb
+    $ python manage.py test
+    $ python manage.py loaddata ./fixtures/example.json
+    $ python manage.py runserver 0:8080
 
 Open http://yourbrowser:8080 and look around.
 
