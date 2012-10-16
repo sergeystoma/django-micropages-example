@@ -84,12 +84,12 @@ class TemplatesTest(TestCase):
         r = re.compile(micropages.templates.url_pattern_compiled)        	
         self.assertEqual(r.match('one/two/three').groups(), ('one/two/three', None))
 
-	def test_should_not_match_nonnumeric_version(self):
-		r = re.compile(micropages.templates.url_pattern_compiled)
-		self.assertEqual(r.match('one@alpha'), None)
+    def test_should_not_match_nonnumeric_version(self):
+        r = re.compile(micropages.templates.url_pattern_compiled)
+        self.assertEqual(r.match('one@alpha'), None)
 
    	def test_should_match_one_page_with_version(self):
-		r = re.compile(micropages.templates.url_pattern_compiled)        	
+        r = re.compile(micropages.templates.url_pattern_compiled)        	
         self.assertEqual(r.match('one@1').groups(), ('one', '1'))
 
     def test_should_match_long_path_with_version(self):
@@ -145,7 +145,7 @@ class TemplatesTest(TestCase):
             response = micropages.views.page(request) 
             
     def test_should_fail_on_unknown_base_template(self):
-        with self.assertRaises(TemplateSyntaxError):
+        with self.assertRaises(TemplateDoesNotExist):
             request = self.factory.get('/unknown-base/')
             response = micropages.views.page(request)  
             
