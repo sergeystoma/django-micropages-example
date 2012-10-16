@@ -88,7 +88,7 @@ class TemplatesTest(TestCase):
         r = re.compile(micropages.templates.url_pattern_compiled)
         self.assertEqual(r.match('one@alpha'), None)
 
-   	def test_should_match_one_page_with_version(self):
+    def test_should_match_one_page_with_version(self):
         r = re.compile(micropages.templates.url_pattern_compiled)        	
         self.assertEqual(r.match('one@1').groups(), ('one', '1'))
 
