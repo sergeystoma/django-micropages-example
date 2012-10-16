@@ -4,6 +4,8 @@ body { margin: 0; padding: 0; font: 12px/14px normal Helvetica, Arial; overflow:
 
 /* Structure. */
 
+/* Grappelli 2.3.x */
+
 header { 
     position: relative;
     height: 32px; 
@@ -69,12 +71,14 @@ footer .refresh-now-link.auto-refresh-active {
     display: none;
 }
 
-footer .modified-status {
+footer .preview-size, footer .modified-status {
     float: right;
     margin-right: 20px;
 
-    font: normal 12px/24px Arial, sans-serif;    
+    font: normal 12px/24px Arial, sans-serif;       
+}
 
+footer .modified-status {
     display: none;
 }
 
@@ -156,4 +160,39 @@ div.preview-overlay {
 
 div.splitter-active div.preview-overlay {
     display: block;
+}
+
+/* Grappelli 2.4.x */
+
+footer footer.grp-submit-row {
+    display: inline;
+}
+
+footer footer.grp-submit-row > p {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+footer footer.grp-submit-row > input {
+    float: left;
+}
+
+footer footer.grp-submit-row ul { 
+    margin: 0; 
+    padding: 0; 
+    display: inline; 
+}
+
+footer footer.grp-submit-row ul li { 
+    list-style: none; 
+    display: inline-block; 
+}
+
+footer footer.grp-submit-row ul li { 
+    float: left; 
+}        
+
+footer footer.grp-submit-row ul li.grp-float-left { 
+    float: none; 
 }

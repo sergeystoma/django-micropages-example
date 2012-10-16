@@ -168,10 +168,19 @@ var Page = {
             }
         });
 
+        var showSize = function() {
+          jQuery('.preview-size').html(
+              jQuery('div#preview').width() + ' x ' + jQuery('div#preview').height());
+        };
+
         var that = this;
         jQuery('#editor').resize(function() {
             that.editor.resize();
+
+            showSize();
         });
+
+        showSize();
     },
 
     /** Setup keybindings. */
